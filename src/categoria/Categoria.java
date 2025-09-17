@@ -1,4 +1,5 @@
 package categoria;
 
-public class Categoria {
+public enum Categoria {
+    Laptop, Smartphone, Game
 }

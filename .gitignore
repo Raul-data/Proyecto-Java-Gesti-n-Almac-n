@@ -1,29 +1,17 @@
-### IntelliJ IDEA ###
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Archivos compilados de Java
+target/
 out/
-!**/src/main/**/out/
-!**/src/test/**/out/
+*.class
 
-### Eclipse ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
+# Archivos binarios (PDFs, imágenes, etc.)
+Apuntes/*.pdf
+Apuntes/*.jpg
+Apuntes/*.png
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-
-### VS Code ###
-.vscode/
-
-### Mac OS ###
+# Archivos del sistema
 .DS_Store
+Thumbs.db

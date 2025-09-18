@@ -1,4 +1,4 @@
-// Complejidad de 0(1) en todos sus metodos
+// Complejidad de 0(1) en todos sus metodos, porque trabaja con atributos simples
 public class Producto {
     private String codigoProducto;
     private String nombreProducto;
@@ -6,7 +6,7 @@ public class Producto {
     private Categoria categoria;
     private int stockActual;
 
-    //Constructor
+    //Constructor -> 0(1)
     public Producto(String codigoProducto, String nombreProducto, double precio, Categoria categoria, int stockActual) {
         this.codigoProducto = codigoProducto;
         this.nombreProducto = nombreProducto;
@@ -15,7 +15,7 @@ public class Producto {
         this.stockActual = stockActual;
     }
 
-    //Getters
+    //Getters -> 0(1)
     public String getCodigoProducto() {
         return codigoProducto;
     }
@@ -36,7 +36,7 @@ public class Producto {
         return stockActual;
     }
 
-    //Setters
+    //Setters -> 0(1)
     public void setPrecio(double precio) {
         this.precio = precio;
     }
@@ -45,12 +45,12 @@ public class Producto {
         this.stockActual = stockActual;
     }
 
-    //Valor total del stock
+    //Valor total del stock -> 0(1)
     public double valorTotalStock(){
         return precio*stockActual;
     }
 
-    //toString
+    //toString -> 0(1)
     @Override
     public String toString() {
         return "Producto{" +

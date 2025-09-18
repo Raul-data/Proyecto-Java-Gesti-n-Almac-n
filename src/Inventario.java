@@ -2,21 +2,24 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+// Complejidad general: la mayoría de métodos son O(1)
+
 public class Inventario {
     private String nombreTienda;
     private HashMap<String, Producto> productos;
 
+    //Constructor -> 0(1)
     public Inventario(String nombreTienda) {
         this.nombreTienda = nombreTienda;
         this.productos = new HashMap<String, Producto>();
     }
 
-    //Agregar producto
+    // Agregar producto -> O(1) promedio
     public void agregarProducto(Producto producto) {
         productos.put(producto.getCodigoProducto(), producto);
     }
 
-    //Actualizar o añadir stock
+    // Actualizar o añadir stock -> O(1)
     public void actualizarStock(String codigoProducto, int cantidad) {
         Producto producto = productos.get(codigoProducto);
         if(producto != null) {
@@ -27,7 +30,7 @@ public class Inventario {
         }
     }
 
-    //Vender producto
+    // Vender producto -> O(1)
     public void venderProducto(String codigoProducto, int cantidad) {
         Producto producto = productos.get(codigoProducto);
         if(producto != null) {
@@ -35,19 +38,19 @@ public class Inventario {
                 producto.setStockActual(producto.getStockActual() - cantidad);
                 System.out.println("Venta de " + cantidad + " unidades de " + producto.getNombreProducto());
             }else {
-                System.out.println("No hay suficiente stock de" + producto.getNombreProducto());
+                System.out.println("No hay suficiente stock de " + producto.getNombreProducto());
             }
         }else {
             System.out.println("Producto no encontrado");
         }
     }
 
-    //Consulta de producto
+    //Consulta de producto -> O(1)
     public Producto consultarProducto(String codigoProducto) {
         return productos.get(codigoProducto);
     }
 
-    //Lista de producto por categoria
+    //Lista de producto por categoria -> O(n)
     public List<Producto> productosPorCategoria(Categoria categoria) {
         List<Producto> lista = new ArrayList<>();
         for (Producto producto : productos.values()) {
@@ -58,7 +61,7 @@ public class Inventario {
         return lista;
     }
 
-    //Valor total de inventario
+    //Valor total de inventario -> O(n)
     public double valorTotalInventario(){
         double total = 0;
         for (Producto producto : productos.values()) {
@@ -67,7 +70,7 @@ public class Inventario {
         return total;
     }
 
-    //Mostrar inventario
+    //Mostrar inventario -> O(n)
     public void mostrarInventario(){
         System.out.println("Inventario de " + nombreTienda);
         double totalGeneral = 0;

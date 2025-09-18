@@ -12,25 +12,25 @@ public class Main {
         tienda.agregarProducto(p2);
         tienda.agregarProducto(p3);
 
-        //Agregar productos duplicado(Que lo sobrescribe)
-        tienda.agregarProducto(new Producto("P001", "Laptop HP", 900.0, Categoria.LAPTOP, 4));
+//        //Agregar productos duplicado(Que lo sobrescribe)
+//        tienda.agregarProducto(new Producto("P001", "Laptop HP", 900.0, Categoria.LAPTOP, 4));
 
-        //Consultar precio que no existe
-        System.out.println(tienda.consultarProducto("P999"));
-
-        //Añadir stock de producto inexistente
-        tienda.actualizarStock("P999", 5);
-
-        //Venta normal
-        tienda.venderProducto("P003", 10);
-
-        //Venta de stock insuficiente
-        tienda.venderProducto("P003", 10);
-
-        //Buscar por categoria
-        System.out.println("Productos en categoria LAPTOP: " + tienda.productosPorCategoria(Categoria.LAPTOP));
-
-        //inventario completo
-        tienda.mostrarInventario();
+           //Consultar precio que no existe
+//        System.out.println(tienda.consultarProducto("P999"));
+//
+////        //Añadir stock de producto inexistente
+//        tienda.actualizarStock("P999", 5);
+//
+//        //Venta normal
+//        tienda.venderProducto("P003", 10);
+//
+//        //Venta de stock insuficiente
+//        tienda.venderProducto("P003", 10);
+//
+//        //Buscar por categoria
+//        System.out.println("Productos en categoria LAPTOP: " + tienda.productosPorCategoria(Categoria.LAPTOP));
+//
+//        //inventario completo
+//        tienda.mostrarInventario();
     }
 }

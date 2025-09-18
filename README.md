@@ -1,0 +1,102 @@
+TRABAJO DE ACCESO A DATOS GESTIÓN ALMACÉN
+1. ENUM CATEGORÍA
+Ubicación: Fuera de la clase Producto
+
+Tipo: Enumerado definido por el usuario
+
+Valores posibles:
+
+LAPTOP
+
+SMARTPHONE
+
+GAME
+
+Función: Cada objeto de categoría puede tomar estos valores
+
+2. CLASE PRODUCTO
+Atributos:
+
+códigoProducto (String)
+
+nombre (String)
+
+precio (double)
+
+categoria (tipo Categoria)
+
+stockActual (int)
+
+Constructor:
+Constructor con todos los parámetros
+
+Métodos de acceso:
+Getters: Todos los atributos
+
+Setters: Solo stock y precio
+
+Métodos específicos:
+Método que retorne el valor actual de todos los productos de un mismo tipo según su stock (valor total del stock)
+
+Método toString()
+
+3. CLASE INVENTARIO_TIENDA
+Atributos:
+
+nombreTienda (String)
+
+HashMap<String, Producto> (clave: código del producto)
+
+Métodos requeridos:
+agregarProducto()
+
+actualizarStock() o añadirStock()
+
+venderProducto()
+
+consultarProducto()
+
+getProductosPorCategoria() - Retorna List<Producto>
+
+getValorTotalInventario() - Getter que retorna el total
+
+mostrarInventario() - Muestra:
+
+Número total de productos
+
+Valor total del inventario
+
+Desglose por categorías
+
+4. CLASE MAIN (PRUEBAS)
+Casos de prueba a implementar:
+
+Agregar productos
+
+Intentar agregar productos duplicados
+
+Consultar un producto que no existe
+
+Añadir stock de un producto que no existe
+
+Ventas normales y ventas con stock insuficiente
+
+Buscar productos por categoría
+
+Intentar imprimir productos de categoría que no existe
+
+Mostrar todo el inventario completo
+
+5. GESTIÓN DE ALMACÉN (REQUERIMIENTOS FUNCIONALES):
+   
+Habrá productos para vender
+
+Control de stock de productos
+
+Capacidad para agregar nuevos productos
+
+Funcionalidad para verificar la existencia de productos
+
+6. COMPLEJIDAD DE CÓDIGOS
+
+Nota: Debe indicarse la complejidad en la cabecera de cada método/clase

@@ -7,23 +7,30 @@ import java.util.List;
 public class Inventario {
     private String nombreTienda;
     private ArrayList<Producto> productos;
+
+    //Esto es con HashMap
 //    private HashMap<String, Producto> productos;
 
     //Constructor -> 0(1)
     public Inventario(String nombreTienda) {
         this.nombreTienda = nombreTienda;
         this.productos = new ArrayList<>();
+        //Esto es con HashMap
 //        this.productos = new HashMap<String, Producto>();
     }
 
     // Agregar producto -> O(1) promedio
     public void agregarProducto(Producto producto) {
         productos.add(producto);
+
+        //Esto es con HashMap
 //        productos.put(producto.getCodigoProducto(), producto);
     }
 
     // Actualizar o añadir stock -> O(n)
     public void actualizarStock(String codigoProducto, int cantidad) {
+
+        //Esto es arrayList
         for (Producto producto : productos) {
             if (producto.getCodigoProducto().equals(codigoProducto)) {
                 producto.setStockActual(producto.getStockActual() + cantidad);
@@ -32,6 +39,8 @@ public class Inventario {
             }
         }
         System.out.println("No existe el producto con el codigo: " + codigoProducto);
+
+        //Esto es con HashMap
 //        Producto producto = productos.get(codigoProducto);
 //        if(producto != null) {
 //            producto.setStockActual(producto.getStockActual() + cantidad);
@@ -43,6 +52,8 @@ public class Inventario {
 
     // Vender producto -> O(n)
     public void venderProducto(String codigoProducto, int cantidad) {
+
+        //Esto es arrayList
         for (Producto producto : productos) {
             if(producto.getCodigoProducto().equals(codigoProducto)) {
                 if(producto.getStockActual() >= cantidad) {
@@ -55,6 +66,8 @@ public class Inventario {
             }
         }
         System.out.println("Producto no encontrado");
+
+        //Esto es con HashMap
 //        Producto producto = productos.get(codigoProducto);
 //        if(producto != null) {
 //            if(producto.getStockActual() >= cantidad) {
@@ -76,17 +89,23 @@ public class Inventario {
             }
         }
         return null;
+
+        //Esto es con HashMap
 //        return productos.get(codigoProducto);
     }
 
     //Lista de producto por categoria -> O(n)
     public List<Producto> productosPorCategoria(Categoria categoria) {
         List<Producto> lista = new ArrayList<>();
+
+        //Esto es arrayList
         for(Producto producto : productos) {
             if(producto.getCategoria() == categoria) {
                 lista.add(producto);
             }
         }
+
+        //Esto es con HashMap
 //        for (Producto producto : productos.values()) {
 //            if (producto.getCategoria() ==  categoria) {
 //                lista.add(producto);
@@ -97,10 +116,14 @@ public class Inventario {
 
     //Valor total de inventario -> O(n)
     public double valorTotalInventario(){
-        double total = 0;
+        double total = 0.0;
+
+        //Esto es arrayList
         for(Producto producto : productos) {
             total += producto.valorTotalStock();
         }
+
+        //Esto es con HashMap
 //        for (Producto producto : productos.values()) {
 //            total += producto.valorTotalStock();
 //        }
@@ -110,12 +133,13 @@ public class Inventario {
     //Mostrar inventario -> O(n)
     public void mostrarInventario(){
         System.out.println("Inventario de " + nombreTienda);
-        double totalGeneral = 0;
+        double totalGeneral = 0.0;
         int totalProductos = 0;
 
         java.util.HashMap<Categoria, Double> valorPorCategoria = new java.util.HashMap<>();
         java.util.HashMap<Categoria, Integer> cantidadPorCategoria = new java.util.HashMap<>();
 
+        //Esto es arrayList
         for (Producto producto : productos) {
             totalGeneral += producto.valorTotalStock();
             totalProductos += producto.getStockActual();
@@ -126,6 +150,8 @@ public class Inventario {
             cantidadPorCategoria.put(producto.getCategoria(),
                     cantidadPorCategoria.getOrDefault(producto.getCategoria(), 0)+producto.getStockActual());
         }
+
+        //Esto es con HashMap
 //        HashMap<Categoria, Double> valorPorCategoria = new HashMap<>();
 //        HashMap<Categoria, Integer> cantidadPorCategoria = new HashMap<>();
 //

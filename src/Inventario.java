@@ -14,6 +14,8 @@ public class Inventario {
     //Constructor -> 0(1)
     public Inventario(String nombreTienda) {
         this.nombreTienda = nombreTienda;
+
+        //Esto es arrayList
         this.productos = new ArrayList<>();
         //Esto es con HashMap
 //        this.productos = new HashMap<String, Producto>();
@@ -31,6 +33,7 @@ public class Inventario {
     public void actualizarStock(String codigoProducto, int cantidad) {
 
         //Esto es arrayList
+        //cambiar este for con un while
         for (Producto producto : productos) {
             if (producto.getCodigoProducto().equals(codigoProducto)) {
                 producto.setStockActual(producto.getStockActual() + cantidad);
@@ -107,7 +110,7 @@ public class Inventario {
 
         //Esto es con HashMap
 //        for (Producto producto : productos.values()) {
-//            if (producto.getCategoria() ==  categoria) {
+//            if (producto.getCategoria().equals(categoria)) {
 //                lista.add(producto);
 //            }
 //        }

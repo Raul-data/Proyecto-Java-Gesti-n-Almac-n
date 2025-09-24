@@ -29,6 +29,12 @@ public class Inventario {
 //        productos.put(producto.getCodigoProducto(), producto);
     }
 
+//esto es lo de javadoc
+    /**
+     *
+     * @param codigoProducto
+     * @param cantidad
+     */
     // Actualizar o añadir stock -> O(n)
     public void actualizarStock(String codigoProducto, int cantidad) {
 

@@ -33,7 +33,7 @@ public class Inventario {
     public void actualizarStock(String codigoProducto, int cantidad) {
 
         //Esto es arrayList
-        //cambiar este for con un while
+        //cambiar este for con un while(como opcion)
         for (Producto producto : productos) {
             if (producto.getCodigoProducto().equals(codigoProducto)) {
                 producto.setStockActual(producto.getStockActual() + cantidad);

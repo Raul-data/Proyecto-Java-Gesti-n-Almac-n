@@ -1,0 +1,17 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Archivos compilados de Java
+target/
+out/
+*.class
+
+# Archivos binarios (PDFs, imágenes, etc.)
+Apuntes/*.pdf
+Apuntes/*.jpg
+Apuntes/*.png
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db

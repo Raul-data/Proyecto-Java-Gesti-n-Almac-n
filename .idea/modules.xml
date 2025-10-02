@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/Carrito/Carrito.iml" filepath="$PROJECT_DIR$/Carrito/Carrito.iml" />
       <module fileurl="file://$PROJECT_DIR$/CarritoHashMap.iml" filepath="$PROJECT_DIR$/CarritoHashMap.iml" />
-=======
-      <module fileurl="file://$PROJECT_DIR$/GestionAlmacen.iml" filepath="$PROJECT_DIR$/GestionAlmacen.iml" />
->>>>>>> 7d0f7f7b74f3e50e9c6106be6af726bc2b8aa2ae
     </modules>
   </component>
 </project>
